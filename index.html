@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            height: 100vh;
+        }
+
+        .cliped-video {
+            clip-path: url(#clipVideo);
+        }
+    </style>
+</head>
+
+<body>
+    <section class="container">
+        <div id="hero">
+            <!-- <svg viewBox="0 0 500 500" width="100%" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <clipPath id="clipPath1">
+                        <path d=" M3.23779 133.183L75.6371 8.18348C78.2298 3.70694 83.0112 0.95082 88.1844 0.950819L393.277
+                        0.950806C398.45 0.950806 403.231 3.70692 405.824 8.18346L478.223 133.183C480.827 137.679 480.827
+                        143.223 478.223 147.718L405.824 272.718C403.231 277.195 398.45 279.951 393.277 279.951L88.1844
+                        279.951C83.0112 279.951 78.2299 277.195 75.6371 272.718L3.2378 147.718C0.634248 143.223 0.634243
+                        137.679 3.23779 133.183Z" />
+                    </clipPath>
+                </defs>
+                <image xlink:href="./25568.jpg" x="0" y="0" height="500" width="500"
+                    style="clip-path: url(#clipPath1);" />
+            </svg> -->
+
+            <video class="cliped-video" width="30%" autoplay loop muted>
+                <source src="./pexels-artem-podrez-7233556.mp4" type="video/mp4">
+            </video>
+            <svg id="svgHexagon" width="481" height="281" viewBox="0 0 481 281" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <clipPath id="clipVideo" clipPathUnits="objectBoundingBox">
+                        <path id="svgHexagonPath"
+                            d="M0.007,0.477 L0.158,0.029 C0.163,0.013,0.173,0.003,0.184,0.003 L0.821,0.003 C0.832,0.003,0.842,0.013,0.847,0.029 L0.999,0.477 C1,0.493,1,0.513,0.999,0.529 L0.847,0.977 C0.842,0.994,0.832,1,0.821,1 L0.184,1 C0.173,1,0.163,0.994,0.158,0.977 L0.007,0.529 C0.001,0.513,0.001,0.493,0.007,0.477"
+                            stroke="black" />
+                    </clipPath>
+                </defs>
+            </svg>
+        </div>
+
+    </section>
+
+    <script src="https://cdn.rawgit.com/sarathsaleem/grained/master/grained.js"></script>
+    <script>
+        var options = {
+            "animate": false,
+            "patternWidth": 400,
+            "patternHeight": 400,
+            "grainOpacity": 0.08,
+            "grainDensity": 1.5,
+            "grainWidth": 1,
+            "grainHeight": 1,
+        }
+        grained("#hero", options);
+
+// https://yoksel.github.io/relative-clip-path/
+    </script>
+</body>
+
+</html>
